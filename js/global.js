@@ -131,7 +131,7 @@ function lightboxInit(){
 
 $(document).ready(function() {
 	var viewPortWidth = $(window).width();
-	if (viewPortWidth > 1000) {
+	if (viewPortWidth > 1200) {
 		vf_overlaySetup();
 		lightboxInit();
 	}
@@ -140,7 +140,7 @@ $(document).ready(function() {
 
 $(window).resize(function(){
 	var viewPortWidth = $(window).width();
-	if (viewPortWidth > 1000) {
+	if (viewPortWidth > 1200) {
 		vf_overlaySetup();
 	}
 });
