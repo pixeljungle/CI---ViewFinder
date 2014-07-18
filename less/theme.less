@@ -253,7 +253,8 @@
 
 
 body {
-	background-color: #222;
+  
+  background-color: #222;
   font-family: "myriad-pro",sans-serif;
   font-weight: 400;
   position: relative;
@@ -305,67 +306,12 @@ h3{
 }
 
 .pod {
-	cursor: pointer;
-}
-
-.podPromote {
-	color: #fff;
-}
-
-.podMarket {
-	margin-top: 20px;
-	background-image: url(../images/home-hero-marketview.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: auto 170%;
-}
-.podConsumer {
-	padding-top: 50px;
-	background-image: url(../images/home-hero-consumerview.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: auto 170%;
-}
-.podMy {
-	margin-top: @grid-gutter-width ;
-	padding-top: 350px;
 	
-	background-image: url(../images/home-hero-myview.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: auto 170%;
-}
-.podMarket:hover {
-	background:#b21c87;
-}
-.podConsumer:hover {
-	background:#0397d7;
-}
-.podMy:hover {
-	background:#f16649;
-}
-.podDownload {
-	margin-top: @grid-gutter-width;
-	background: rgba(255,255,255,0.6);
-	color: #333;
-}
-.podDownload img {
-	.pull-left();
-	margin-right: @grid-gutter-width;
+	cursor: pointer;
 }
 
 .navbar-right {
 	margin-right: @grid-gutter-width !important;
-}
-
-.podAbout {
-	background-image: url(../images/logo.png);
-	background-position: center @grid-gutter-width;
-	background-repeat: no-repeat;
-	background-size: 30%;
-	background-color: rgba(255,255,255,0.8);
-	margin-top: @grid-gutter-width ;
-	padding-top:150px;
 }
 
 .navbar-brand {
@@ -379,30 +325,18 @@ h3{
 	margin-right:  @grid-gutter-width;
 }
 
-.podContact {}
 
-@media (min-width: @screen-sm-min) {
-	
-
-	.podAbout img{
-		.center-block();
+@media (min-width: @screen-lg-min) {
+	.pod {
+		h3 {
+			color:#fff;
+		}
 	}
 }
 
-@media (max-width: @screen-sm-min) {
-	
-	.podDownload img {.pull-right();}
-	.podAbout img {.pull-left();}
-}
 
-@media (max-width: @screen-sm-min) {
-	
-	.pod {margin-bottom: @grid-gutter-width}
-
-}
 @media (max-width: @screen-xs-min) {
 	
-
 	.pod img {display: none;}
 }
 
@@ -442,13 +376,7 @@ a.closeBtn {display:block;position:absolute; height: 47px; width:47px; backgroun
         right:0;
     }
 
-    .idea3 {
-	
-	    .podPromote {
-		    margin-top: 100px;
-	    }
 
-    }
 }
 
 @media (max-width: @screen-md-max) {
@@ -477,68 +405,157 @@ a.closeBtn {display:block;position:absolute; height: 47px; width:47px; backgroun
     color:#222;
 }
 
-.hoverImage{
-  position: relative;
-  overflow: hidden;
-  .overlay{
-    position: absolute;
-    bottom:0;
-  }
-  &.first{
-    .overlay{
-      background-color: #ae1c83;
-    }
-  }
-  &.second{
-    .overlay{
-      background-color: #0095d5;
-    }
-  }
-  &.third{
-    .overlay{
-      background-color: #d3de4d;
-    }
-  }
-  .title{
-    font-size: 30px;
-    position: absolute;
-    display: none;
-  }
-  .frame{
-    position: absolute;
-    z-index: 1001;
-    top:0;
-  }
-  
-  .icons{
-    position: absolute;
-    list-style-type: none;
-    display: none;
-    .row{
-      width: 85%;
-      margin-left: 30px;
-      margin-bottom:10px;
-      .col-lg-3{
-        a{
-          position: relative;
-          z-index: 1000;
-          &.open{
-            z-index: 1002;
-          }
-        }
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-    }
-  } 
-  &.third{
-    .icons{
-      .row{
-        margin-left: 40px;
-      }
-    }
-  }
-} 
+
+
+@media (max-width: @screen-xs-max) {
+	.pod {
+			
+		}
+}
+
+@media ( max-width: @screen-md-max) {
+	
+	.pod {
+		margin-bottom: @grid-gutter-width;
+		h3 {
+			text-align: center;
+			padding:10px;
+			color: #eee;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		p {
+			padding: 20px;
+			background-color: rgba(255,255,255,0.72);
+		}
+	}
+	
+	.icons {
+	
+		a {
+			margin: 10px;
+		}	
+		a,
+		img {
+			float:left;
+			
+		}
+		.row {
+			//max-width: 430px;
+			//float: left;
+		}
+
+	}
+	
+	.first,
+	.second,
+	.third {
+		background-color: #fff;
+	}
+	
+	.first {
+		background-image: url(../images/home-small-hero-marketview.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: auto;
+			
+		h3 {
+			background-color: #ad1c83;
+		}
+	}
+	.second {
+		background-image: url(../images/home-small-hero-consumerview.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: auto;
+		h3 {
+			background-color: #0095d5;
+		}
+	}
+	.third {
+		background-image: url(../images/home-small-hero-myview.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: auto;
+		h3 {
+			background-color: #d3de4d;
+		}
+	}
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+
+}
+
+@media (min-width: @screen-lg-min) {
+	.blurb {
+		display: none;
+	}
+	
+	.hoverImage{
+	  position: relative;
+	  overflow: hidden;
+	  .overlay{
+	    position: absolute;
+	    bottom:0;
+	  }
+	  &.first{
+	    .overlay{
+	      background-color: #ae1c83;
+	    }
+	  }
+	  &.second{
+	    .overlay{
+	      background-color: #0095d5;
+	    }
+	  }
+	  &.third{
+	    .overlay{
+	      background-color: #d3de4d;
+	    }
+	  }
+	  .title{
+	    font-size: 30px;
+	    position: absolute;
+	    display: none;
+	  }
+	  .frame{
+	    position: absolute;
+	    z-index: 1001;
+	    top:0;
+	  }
+	  
+	  .icons{
+	    position: absolute;
+	    list-style-type: none;
+	    display: none;
+	    .row{
+	      width: 85%;
+	      margin-left: 30px;
+	      margin-bottom:10px;
+	      .col-lg-3{
+	        a{
+	          position: relative;
+	          z-index: 1000;
+	          &.open{
+	            z-index: 1002;
+	          }
+	        }
+	        padding-left: 5px;
+	        padding-right: 5px;
+	      }
+	    }
+	  } 
+	  &.third{
+	    .icons{
+	      .row{
+	        margin-left: 40px;
+	      }
+	    }
+	  }
+	}
+
+}
 
 @media all and (max-width: 1230px) {
   .hoverImage{

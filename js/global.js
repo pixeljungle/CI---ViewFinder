@@ -8,6 +8,7 @@ function closeBox(){
 		});
 	});
 }
+
 function lightboxOpen(itemToOpen){
 	var itemsNeeded = $('#'+itemToOpen+ ' .col-lg-3'),
 		itemLength = itemsNeeded.length,
@@ -129,10 +130,17 @@ function lightboxInit(){
 }
 
 $(document).ready(function() {
-	vf_overlaySetup();
-	lightboxInit();
+	var viewPortWidth = $(window).width();
+	if (viewPortWidth > 1000) {
+		vf_overlaySetup();
+		lightboxInit();
+	}
+	
 });
 
 $(window).resize(function(){
-	vf_overlaySetup();
+	var viewPortWidth = $(window).width();
+	if (viewPortWidth > 1000) {
+		vf_overlaySetup();
+	}
 });
