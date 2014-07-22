@@ -134,6 +134,8 @@ $(document).ready(function() {
 	if (viewPortWidth > 1200) {
 		vf_overlaySetup();
 		lightboxInit();
+	}else{
+		$('.hoverImage .overlay').className('hidden');
 	}
 	
 });
@@ -142,5 +144,7 @@ $(window).resize(function(){
 	var viewPortWidth = $(window).width();
 	if (viewPortWidth > 1200) {
 		vf_overlaySetup();
-	}
+	}else{
+		$('.hoverImage .overlay').className('hidden');
+	} 
 });
